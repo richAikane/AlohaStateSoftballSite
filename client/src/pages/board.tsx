@@ -23,8 +23,7 @@ export default function Board() {
       id: "covert-name",
       name: "💰 Michael Covert",
       title: "Treasurer",
-      description: "Manages the league's finances and budget.",
-      email: "MichaelCovert.2009@gmail.com"
+      description: "Manages the league's finances and budget."
     },
     {
       id: "childress-name",
@@ -37,54 +36,47 @@ export default function Board() {
       id: "kaylee-name",
       name: "🌴 Kaylee Bonnett",
       title: "Assistant Commissioner (C Division)",
-      description: "Assists the Commissioner, focusing on C Division matters.",
-      email: "kayleebonnett@gmail.com"
+      description: "Assists the Commissioner, focusing on C Division matters."
     },
     {
       id: "kaye-name",
       name: "🌴 Kaye Stentiford",
       title: "Assistant Commissioner (D Division)",
-      description: "Assists the Commissioner, focusing on D Division matters.",
-      email: "cstentiford@gmail.com"
+      description: "Assists the Commissioner, focusing on D Division matters."
     },
     {
       id: "kiera-name",
       name: "🌴 Kiera Williams",
       title: "Assistant Commissioner (E Division)",
-      description: "Assists the Commissioner, focusing on E Division matters.",
-      email: "williamsmkiera@gmail.com"
+      description: "Assists the Commissioner, focusing on E Division matters."
     },
     {
       id: "andrew-name",
       name: "🤝 Andrew Shelton",
       title: "Community Outreach",
-      description: "Leads initiatives connecting the league with the wider community.",
-      email: "sheltonandrew504@gmail.com"
+      description: "Leads initiatives connecting the league with the wider community."
     },
     {
       id: "kovaloff-name",
       name: "🧰 Daniel Kovaloff",
       title: "Director of Fields & Equipment",
-      description: "Manages field scheduling, maintenance, and league equipment.",
-      email: "portillodaniel1985@outlook.com"
+      description: "Manages field scheduling, maintenance, and league equipment."
     },
     {
       id: "kamealoha-name",
       name: "📬 Branden Kamealoha",
       title: "Member at Large",
-      description: "Represents the general membership on the board.",
-      email: "bkamealoha@gmail.com"
+      description: "Represents the general membership on the board."
     },
     {
       id: "scott-name",
       name: "📬 Brandon Scott",
       title: "Member at Large",
-      description: "Represents the general membership on the board.",
-      email: "cub8119@gmail.com"
+      description: "Represents the general membership on the board."
     }
   ];
 
-  const bccEmails = boardMembers.map(member => member.email).join(',');
+  const bccEmails = boardMembers.filter(member => member.email).map(member => member.email).join(',');
 
   const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -137,12 +129,14 @@ export default function Board() {
                 <h3 id={member.id} className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
                 <p className="text-md text-blue-700 font-semibold mb-1">{member.title}</p>
                 <p className="text-sm text-gray-600 mb-3">{member.description}</p>
-                <a 
-                  href={`mailto:${member.email}`} 
-                  className="email-link text-sm text-gray-700 hover:text-blue-700 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-500 rounded transition duration-200"
-                >
-                  📧 {member.email}
-                </a>
+                {member.email && (
+                  <a 
+                    href={`mailto:${member.email}`} 
+                    className="email-link text-sm text-gray-700 hover:text-blue-700 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-500 rounded transition duration-200"
+                  >
+                    📧 {member.email}
+                  </a>
+                )}
               </article>
             ))}
           </div>

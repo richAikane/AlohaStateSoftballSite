@@ -23,7 +23,7 @@ export const SECTIONS = [
       "officers",
       "contacts"
     ],
-    "text": "_Current season board and roles (confirm before publishing emails)._\n\n- **Commissioner:** Mikey Rickman — `Mikey@alohastatesoftball.com`\n- **Treasurer:** Michael Covert — `MichaelCovert.2009@gmail.com`\n- **Secretary:** Brandon Childress — `brandon.childress@alohastatesoftball.com`\n- **Assistant Commissioner (C):** Kaylee Bonnett — `kayleebonnett@gmail.com`\n- **Assistant Commissioner (D):** Kaye Stentiford — `cstentiford@gmail.com`\n- **Assistant Commissioner (E):** Kiera Williams — `williamsmkiera@gmail.com`\n- **Director of Community Outreach:** Andrew Shelton — `sheltonandrew504@gmail.com`\n- **Director of Fields & Equipment:** Daniel Kovaloff — `portillodaniel1985@outlook.com`\n- **Member at Large:** Branden Kamealoha — `bkamealoha@gmail.com`\n- **Member at Large:** Brandon Scott — `cub8119@gmail.com`\n\n**Contact tip:** If unsure or a rule isn't specified, ask a clarifying question or direct users to the Board."
+    "text": "_Current season board and roles (confirm before publishing emails)._\n\n- **Commissioner:** Mikey Rickman — `Mikey@alohastatesoftball.com`\n- **Treasurer:** Michael Covert\n- **Secretary:** Brandon Childress — `brandon.childress@alohastatesoftball.com`\n- **Assistant Commissioner (C):** Kaylee Bonnett\n- **Assistant Commissioner (D):** Kaye Stentiford\n- **Assistant Commissioner (E):** Kiera Williams\n- **Director of Community Outreach:** Andrew Shelton\n- **Director of Fields & Equipment:** Daniel Kovaloff\n- **Member at Large:** Branden Kamealoha\n- **Member at Large:** Brandon Scott\n\n**Contact tip:** If unsure or a rule isn't specified, ask a clarifying question or direct users to the Board."
   },
   {
     "id": "bylaws",
