@@ -84,6 +84,24 @@ export default function SponsorBanner() {
               <h3 className="font-bold text-gray-800 text-base mb-1">Host Hotels</h3>
               <p className="text-sm text-gray-600">Twin Fin & Alohilani</p>
               <p className="text-xs text-gray-500 mt-2">Steps from Waikīkī</p>
+              <div className="flex flex-col gap-1 mt-2 text-xs font-semibold">
+                <a
+                  href="https://www.twinfinwaikiki.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-purple-800 hover:underline"
+                >
+                  The Twin Fin
+                </a>
+                <a
+                  href="https://www.alohilaniresort.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-purple-800 hover:underline"
+                >
+                  Alohilani Resort
+                </a>
+              </div>
             </div>
           </div>
 
