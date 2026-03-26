@@ -190,26 +190,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Season 4 Events Section */}
-      <section className="w-full py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              <span className="pride-text">Season 4 Events</span> 📅
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Mark your calendars for an exciting season of softball and community events!
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-pink-100 to-yellow-100 rounded-2xl p-8 text-center">
-            <img src="https://static.wixstatic.com/media/df1e99_a499a46ae03548b7ba2db534af034a8d~mv2.png/v1/fill/w_1363,h_924,al_c,q_90,enc_avif,quality_auto/Pop%20Up%20Market%20Festival%20Schedule%20Flyer-1.png" 
-                 alt="Season 4 Events Calendar" 
-                 className="mx-auto rounded-xl shadow-lg max-w-full h-auto hover-lift fade-in" />
-          </div>
-        </div>
-      </section>
-
       {/* Banner Divider */}
       <div className="w-full py-4">
         <img src="https://static.wixstatic.com/media/df1e99_5197682b37e34d269664ff746162b543~mv2.png" 
