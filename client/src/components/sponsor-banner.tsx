@@ -1,167 +1,161 @@
 import anuenueClassicLogo from "../assets/anuenue-classic-logo.jpeg";
 import tropicalBg from "../assets/tropical-palm-bg-2.png";
-
-const registrationLink = "https://teamsideline.com/sites/aikaneohana/home";
+import { useLocation, Link } from "wouter";
 
 export default function SponsorBanner() {
-  return (
-    <div className="w-full mx-auto px-4 py-3">
-      <div
-        className="max-w-screen-xl mx-auto rounded-2xl shadow-xl overflow-hidden relative"
-        style={{
-          backgroundImage: `url(${tropicalBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          minHeight: "480px",
-        }}
-      >
-        <div className="absolute inset-0 bg-white/25 z-0"></div>
+  const [location] = useLocation();
+  const isTournamentPage = location === "/anuenue-classic-2026";
 
-        <div className="relative z-10 px-6 py-6 md:px-8 md:py-8">
-          <div className="text-center mb-6">
-            <div className="flex justify-center mb-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-white/50 rounded-full blur-2xl scale-110"></div>
+  if (isTournamentPage) {
+    return (
+      <div className="w-full mx-auto px-4 py-3">
+        <div
+          className="max-w-screen-xl mx-auto rounded-2xl shadow-xl overflow-hidden relative border-l-8 border-pink-500"
+          style={{
+            backgroundImage: `url(${tropicalBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "320px",
+          }}
+        >
+          <div className="absolute inset-0 bg-white/40 z-0"></div>
+
+          <div className="relative z-10 px-6 py-8 md:px-10 md:py-10">
+            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+              <div className="relative flex-shrink-0">
+                <div className="absolute inset-0 bg-white/50 rounded-full blur-xl scale-110"></div>
                 <img
                   src={anuenueClassicLogo}
                   alt="Ānuenue Classic 2026 Logo"
-                  className="relative w-40 h-40 md:w-48 md:h-48 rounded-full shadow-2xl border-4 border-white object-cover"
+                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full shadow-2xl border-4 border-white object-cover"
                 />
               </div>
-            </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-2">
-              <span
-                style={{
-                  background: "linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.3)) drop-shadow(0 2px 4px rgba(255,255,255,0.9))",
-                }}
-              >
-                ĀNUENUE CLASSIC 2026
-              </span>
-            </h2>
-            <p
-              className="text-base md:text-lg font-bold"
-              style={{ color: "#374151", textShadow: "0 2px 4px rgba(255,255,255,0.9)" }}
-            >
-              Team registration now open • March 26–29 · Honolulu
-            </p>
-            <div className="flex flex-wrap justify-center gap-2 mt-3 text-xs md:text-sm text-gray-700">
-              <span className="bg-white/70 px-3 py-1 rounded-full shadow-sm">Pool play + brackets weekend</span>
-              <span className="bg-white/70 px-3 py-1 rounded-full shadow-sm">Built for LGBTQIA+ athletes & allies</span>
-              <span className="bg-white/70 px-3 py-1 rounded-full shadow-sm">Awards for champions, standouts, spirit</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-6">
-            <div className="bg-white/95 backdrop-blur rounded-xl p-4 text-center shadow-md">
-              <div className="text-2xl mb-2">📅</div>
-              <h3 className="font-bold text-gray-800 text-base mb-1">March 26–29, 2026</h3>
-              <p className="text-sm text-gray-600">Thu–Sun tournament weekend</p>
-              <p className="text-xs text-gray-500 mt-2">Games March 28–29</p>
-            </div>
-
-            <div className="bg-white/95 backdrop-blur rounded-xl p-4 text-center shadow-md">
-              <div className="text-2xl mb-2">🌴</div>
-              <h3 className="font-bold text-gray-800 text-base mb-1">Honolulu, Hawai'i</h3>
-              <p className="text-sm text-gray-600">Patsy T. Mink Regional Park</p>
-              <p className="text-xs text-gray-500 mt-2">Beautiful island setting</p>
-            </div>
-
-            <div className="bg-white/95 backdrop-blur rounded-xl p-4 text-center shadow-md">
-              <div className="text-2xl mb-2">🌈</div>
-              <h3 className="font-bold text-gray-800 text-base mb-1">Multiple Divisions</h3>
-              <p className="text-sm text-gray-600">Fair, competitive matchups</p>
-              <p className="text-xs text-gray-500 mt-2">Community-first energy</p>
-            </div>
-
-            <div className="bg-white/95 backdrop-blur rounded-xl p-4 text-center shadow-md">
-              <div className="text-2xl mb-2">🏨</div>
-              <h3 className="font-bold text-gray-800 text-base mb-1">Host Hotels</h3>
-              <p className="text-sm text-gray-600">Twin Fin & Alohilani</p>
-              <p className="text-xs text-gray-500 mt-2">Steps from Waikīkī</p>
-              <div className="flex flex-col gap-1 mt-2 text-xs font-semibold">
-                <a
-                  href="https://www.twinfinwaikiki.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-purple-800 hover:underline"
-                >
-                  The Twin Fin
-                </a>
-                <a
-                  href="https://www.alohilaniresort.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-purple-800 hover:underline"
-                >
-                  Alohilani Resort
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur rounded-2xl p-5 shadow-lg">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <p className="text-lg font-bold text-gray-800">Registration: Open now</p>
-                <p className="text-sm text-gray-700">Teams & free agents welcome — secure your spot.</p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full md:w-auto">
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 rounded-xl p-3 shadow-sm text-center">
-                  <p className="text-sm font-semibold text-purple-800">Early Bird</p>
-                  <p className="text-xs text-gray-700">Nov 25–Dec 31, 2025</p>
-                  <p className="text-sm font-bold text-gray-900 mt-1">$325</p>
+              <div className="text-center md:text-left flex-grow">
+                <div className="inline-block bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-md uppercase tracking-wider">
+                  Tournament Hub
                 </div>
-                <div className="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 rounded-xl p-3 shadow-sm text-center">
-                  <p className="text-sm font-semibold text-orange-800">Regular</p>
-                  <p className="text-xs text-gray-700">Jan 1–31, 2026</p>
-                  <p className="text-sm font-bold text-gray-900 mt-1">$450</p>
-                </div>
-                <div className="bg-gradient-to-br from-emerald-50 to-lime-50 border border-emerald-100 rounded-xl p-3 shadow-sm text-center">
-                  <p className="text-sm font-semibold text-emerald-800">Late</p>
-                  <p className="text-xs text-gray-700">Feb 1–28, 2026</p>
-                  <p className="text-sm font-bold text-gray-900 mt-1">$500</p>
+                <h2 className="text-3xl md:text-5xl font-black mb-2">
+                  <span
+                    style={{
+                      background: "linear-gradient(90deg, #9333ea 0%, #ec4899 50%, #f97316 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      filter: "drop-shadow(0 4px 8px rgba(0,0,0,0.2))",
+                    }}
+                  >
+                    ĀNUENUE CLASSIC 2026 HUB
+                  </span>
+                </h2>
+                <p className="text-lg md:text-xl font-bold text-gray-800 mb-6">
+                  Registered teams, key info, and details below.
+                </p>
+
+                <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                  <button
+                    onClick={() => document.getElementById("registered-teams")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                    className="bg-gray-900 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105"
+                  >
+                    Jump to Registered Teams
+                  </button>
+                  <Link
+                    href="/"
+                    className="bg-white/90 text-gray-800 font-bold px-6 py-3 rounded-full shadow-md hover:bg-white transition-all duration-300 hover:scale-105 border border-gray-200"
+                  >
+                    Back to Home
+                  </Link>
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-sm text-gray-700">
-              <span className="font-semibold text-gray-900">Why play?</span>
-              <span>Inclusive tournament by Aloha State Softball & Aikane Ohana</span>
-              <span className="text-gray-500">•</span>
-              <span>Pool play into brackets</span>
-              <span className="text-gray-500">•</span>
-              <span>Champions, standout player, and sportsmanship awards</span>
-            </div>
           </div>
+        </div>
+      </div>
+    );
+  }
 
-          <div className="flex justify-center mt-6">
-            <a
-              href={registrationLink}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-white font-bold text-base md:text-lg px-7 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              style={{
-                background: "linear-gradient(90deg, #ec4899 0%, #f97316 50%, #eab308 100%)",
+  return (
+    <div className="w-full px-4 py-3">
+      <div
+        className="sponsor-section max-w-screen-xl mx-auto bg-cover bg-center rounded-xl px-6 py-3 shadow-md"
+        style={{ backgroundImage: "url('https://static.wixstatic.com/media/df1e99_7d482e4975b446269ed7f7f9cb8c2d62~mv2.png')" }}
+      >
+        <div className="sponsor-section-overlay bg-gradient-to-br from-cyan-100/50 to-pink-100/50 backdrop-blur-md rounded-lg px-4 py-3">
+
+          <div className="flex justify-center mb-4">
+            <img
+              src="https://static.wixstatic.com/media/df1e99_ad0f0c0a9221428690d41358cd5ad6c9~mv2.png"
+              alt="Mahalo to our 2025 Sponsors!"
+              className="w-auto max-h-10 md:max-h-12 object-contain"
+              loading="lazy"
+              onError={(e) => {
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = "none";
+                const fallback = target.nextSibling as HTMLElement | null;
+                if (fallback) fallback.style.display = "block";
               }}
-            >
-              <span>✨</span>
-              <span>Register on TeamSideline</span>
-              <span>✨</span>
+            />
+            <h2 className="hidden text-xl font-bold text-center text-gray-800">Mahalo to Our Sponsors</h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center min-h-[276px]">
+            <a href="https://hulas.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_df8e26ec547d49d48546138fe541f8ef~mv2.png" alt="Hula's Bar & Lei Stand" title="Hula's Bar & Lei Stand" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.hawaiigaybar.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_15421420fa1848a8a1ba6509e9bb80ef~mv2.png" alt="Tapas Waikiki" title="Tapas Waikiki" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.boh.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_b39ff2b25c5b492591872cf7fb1b34ee~mv2.png" alt="Bank of Hawai'i" title="Bank of Hawai'i" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.scarlethonolulu.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_d0a44f9755154669a51d7b884a01b91d~mv2.png" alt="Scarlet Honolulu" title="Scarlet Honolulu" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.instagram.com/whippednwhiskedhawaii/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_80cc683f43274a94b66ecd62773e0d97~mv2.png" alt="Whipped & Whisked" title="Whipped & Whisked" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.kelliwithaneyephotography.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_168ba11d5a514d338ece56115d5fe243~mv2.png" alt="Kelli with an Eye Photography" title="Kelli with an Eye Photography" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://ericzmartin.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_5890ac34dd0c48e9bf7d1b059fe1d5c9~mv2.png" alt="Eric Z Martin Photography" title="Eric Z Martin Photography" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.futureofcool.co/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_85f53ed5f46246deb395e8e0f96e22f2~mv2.png" alt="Future of Cool" title="Future of Cool" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://oteamhawaii.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_b7555d6dc77c439f9cb4e7718bcd7148~mv2.png" alt="The O Team" title="The O Team" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.wangchungs.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_6fc56a91f0554b928bcf944fdf4d08b5~mv2.png" alt="Wang Chung's" title="Wang Chung's" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="#" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_c44094fb039e4250ab4c770d4063fc77~mv2.png" alt="Bacchus Waikiki" title="Bacchus Waikiki" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="#" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_56ea612f4d554ad2b98f6b7687725051~mv2.png" alt="Team Mimosa" title="Team Mimosa" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.mylemon.com/hawaii-lemon-law/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_949a605d460e4f0e96855ac5f51d59ed~mv2.png" alt="Hawai'i Lemon Law" title="Hawai'i Lemon Law" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
+            </a>
+            <a href="https://www.kaimana.com/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="https://static.wixstatic.com/media/df1e99_5f8cc36fa139496b9d35798aa4279ab9~mv2.png" alt="Kaimana Beach Hotel" title="Kaimana Beach Hotel" className="sponsor-bingo h-32 max-w-[180px] object-contain mx-auto" loading="lazy" />
             </a>
           </div>
 
-          <div className="flex justify-center items-center gap-3 text-sm mt-4">
-            <span className="text-lg">🏳️‍🌈</span>
-            <span className="font-semibold text-gray-700">All levels welcome</span>
-            <span className="text-gray-600">•</span>
-            <span className="text-lg">🥎</span>
-            <span className="text-gray-700">Spring 2026 kick-off weekend</span>
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.zeffy.com/en-US/fundraising/support-aloha-state-softball-2025-season"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group overflow-hidden inline-block bg-gradient-to-r from-pink-500 to-yellow-400 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-teal-400 via-purple-500 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              <span className="relative z-10">Become a Sponsor</span>
+            </a>
           </div>
+
         </div>
       </div>
     </div>

@@ -120,12 +120,12 @@ export default function Navigation() {
                         <Link href="/" className="block text-xl font-medium text-gray-800 hover:text-teal-600 py-2" onClick={() => setIsMobileMoreOpen(false)}>
                           Home
                         </Link>
-                        <a href="https://teamsideline.com/sites/aikaneohana/schedules" target="_blank" rel="noopener noreferrer" className="block text-xl font-medium text-gray-800 hover:text-teal-600 py-2 animated-nav-link" onClick={() => setIsMobileMoreOpen(false)}>
-                          Scores & Standings
-                        </a>
                         <Link href="/board" className="block text-xl font-medium text-gray-800 hover:text-teal-600 py-2" onClick={() => setIsMobileMoreOpen(false)}>
                           Board of Directors
                         </Link>
+                        <a href="https://teamsideline.com/sites/aikaneohana/schedules" target="_blank" rel="noopener noreferrer" className="block text-xl font-medium text-gray-800 hover:text-teal-600 py-2 animated-nav-link" onClick={() => setIsMobileMoreOpen(false)}>
+                          Scores & Standings
+                        </a>
                         <Link href="/ratings" className="block text-xl font-medium text-gray-800 hover:text-teal-600 py-2" onClick={() => setIsMobileMoreOpen(false)}>
                           Player Ratings 101
                         </Link>
@@ -177,6 +177,10 @@ export default function Navigation() {
                     Home
                   </Link>
                   <span className="text-gray-300">|</span>
+                  <Link href="/board" className="nav-link text-gray-700 hover:text-teal-800 text-sm font-medium">
+                    Board of Directors
+                  </Link>
+                  <span className="text-gray-300">|</span>
                   <a href="https://teamsideline.com/sites/aikaneohana/schedules" target="_blank" rel="noopener noreferrer" className="nav-link text-gray-700 hover:text-teal-800 text-sm font-medium animated-nav-link">Scores</a>
                   <span className="text-gray-300">|</span>
                   <div className="relative inline-block">
@@ -194,9 +198,6 @@ export default function Navigation() {
                       <div className="py-1" role="none">
                         <a href="https://docs.google.com/document/d/1WVXGL7WZdNofOlHXv-ZwTB6xWIgGlyIvQmrkd3qVT44/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">2025 League Bylaws</a>
                         <a href="https://docs.google.com/document/d/1_xuo1yCFGg8UXqA6PR-imTX50Zg0jvBTya6zu_9bNUc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">2025 Gameplay Rules</a>
-                        <Link href="/board" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">
-                          Board of Directors
-                        </Link>
                         <Link href="/ratings" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">
                           Player Ratings 101
                         </Link>
@@ -232,14 +233,14 @@ export default function Navigation() {
                   <span className="absolute inset-0 bg-gradient-to-r from-red-400 via-yellow-400 to-green-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                   <span className="relative z-10">Home</span>
                 </Link>
+                <Link href="/board" className="nav-link relative group overflow-hidden text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+                  <span className="absolute inset-0 bg-gradient-to-r from-orange-400 via-pink-400 to-red-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                  <span className="relative z-10">Board of Directors</span>
+                </Link>
                 <a href="https://teamsideline.com/sites/aikaneohana/schedules" target="_blank" rel="noopener noreferrer" className="nav-link relative group overflow-hidden text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium animated-nav-link">
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
                   <span className="relative z-10">Scores & Standings</span>
                 </a>
-                <Link href="/board" className="nav-link relative group overflow-hidden text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium hidden xl:block">
-                  <span className="absolute inset-0 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-                  <span className="relative z-10">Board of Directors</span>
-                </Link>
                 <div className="relative">
                   <button 
                     type="button" 
@@ -258,9 +259,9 @@ export default function Navigation() {
                   </button>
                   <div className={`dropdown-menu absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none ${isResourcesOpen ? '' : 'hidden'}`} role="menu" aria-orientation="vertical">
                     <div className="py-1" role="none">
-                      <a href="https://docs.google.com/document/d/1WVXGL7WZdNofOlHXv-ZwTB6xWIgGlyIvQmrkd3qVT44/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">2025 League Bylaws</a>
-                      <a href="https://docs.google.com/document/d/1_xuo1yCFGg8UXqA6PR-imTX50Zg0jvBTya6zu_9bNUc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">2025 Gameplay Rules</a>
-                      <Link href="/ratings" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">
+                      <a href="https://docs.google.com/document/d/1WVXGL7WZdNofOlHXv-ZwTB6xWIgGlyIvQmrkd3qVT44/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" onClick={() => setIsResourcesOpen(false)}>2025 League Bylaws</a>
+                      <a href="https://docs.google.com/document/d/1_xuo1yCFGg8UXqA6PR-imTX50Zg0jvBTya6zu_9bNUc/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" onClick={() => setIsResourcesOpen(false)}>2025 Gameplay Rules</a>
+                      <Link href="/ratings" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" onClick={() => setIsResourcesOpen(false)}>
                         Player Ratings 101
                       </Link>
                       <Link href="/scorekeeping" className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">
